@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, ShoppingBag, X } from 'lucide-react';
+import { Menu , X } from 'lucide-react';
 import logo from './calzonepoint.svg';
 interface NavbarProps {
   scrolled: boolean;
@@ -79,9 +79,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
           </div>
 
           <div className="flex items-center space-x-4">
-            <button className="p-2 hover:bg-orange-500 rounded-full transition-colors">
-              <ShoppingBag className="h-6 w-6 text-white" />
-            </button>
+          
             <button
               onClick={toggleMobileMenu}
               className="md:hidden p-2 hover:bg-orange-500 rounded-full transition-colors"

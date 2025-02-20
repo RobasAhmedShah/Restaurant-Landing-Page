@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const DealsSection = () => {
   const [currentDeal, setCurrentDeal] = useState(0);
@@ -95,9 +95,7 @@ const DealsSection = () => {
                   </div>
                   <div className="mt-8">
                     <div className="text-4xl font-bold text-white mb-4">{deal.price}</div>
-                    <button className="w-full bg-orange-500 text-white py-3 rounded-full hover:bg-orange-600 transition-colors text-lg font-semibold">
-                      Order Now
-                    </button>
+                    
                   </div>
                 </div>
               </div>
