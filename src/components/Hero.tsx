@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Hero = () => {
   return (
@@ -32,7 +31,7 @@ const Hero = () => {
     </span>
         </h1>
         <p className="text-xl md:text-2xl text-white mb-8 opacity-90">
-          Authentic Italian cuisine with a modern twist
+          Where Every Bite is a Delight
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

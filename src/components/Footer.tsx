@@ -1,4 +1,3 @@
-import React from 'react';
 import { Phone, Clock, MapPin } from 'lucide-react';
 
 const Footer = () => {
@@ -11,15 +10,15 @@ const Footer = () => {
             <div className="space-y-4">
               <p className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-orange-500" />
-                (123) 456-7890
+                (905) 595-0211
               </p>
               <p className="flex items-center">
                 <Clock className="h-5 w-5 mr-2 text-orange-500" />
-                Mon-Sun: 11:00 AM - 10:00 PM
+                Mon-Sun: 11:00 AM - 09:00 PM
               </p>
               <p className="flex items-center">
                 <MapPin className="h-5 w-5 mr-2 text-orange-500" />
-                123 Pizza Street, Food City
+                35 King St, E., Mississauga, ON. L5A 4E2,Unit 20.
               </p>
             </div>
           </div>
@@ -56,7 +55,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 text-center">
-          <p>&copy; 2025 CALZONES. All rights reserved.</p>
+          <p>&copy; 2025 CALZONES POINT. All rights reserved.</p>
         </div>
       </div>
     </footer>
