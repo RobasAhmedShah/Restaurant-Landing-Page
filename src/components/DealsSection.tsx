@@ -40,7 +40,7 @@ const DealsSection = () => {
     {
       id: 4,
       title: 'Burger Deal',
-      prices: '$10.99',
+      price: '$10.99',
       items: [
         'Chicken Burger',
         'Small Fries',
