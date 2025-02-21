@@ -180,13 +180,7 @@ const MenuSection = () => {
       prices: { single: 39.99 },
       category: 'combos'
     },
-    {
-      id: 'burger-deal',
-      name: 'Burger Deal',
-      description: 'Chicken Burger, Small Fries, Can of Pop',
-      prices: { single: 10.99 },
-      category: 'combos'
-    },
+    
 
     // Individuals
     {
@@ -295,6 +289,13 @@ const MenuSection = () => {
       category: 'individuals'
     },
     {
+      id: 'water-bottle',
+      name: 'Water Bottle',
+      description: '',
+      prices: { single: 0.99 },
+      category: 'individuals'
+    },
+    {
       id: 'dipping-sauce',
       name: 'Dipping Sauce',
       description: '',
@@ -323,7 +324,43 @@ const MenuSection = () => {
       description: '',
       prices: { single: 4.99 },
       category: 'desserts'
-    }
+    },
+    {
+      id: 'oreo-shake',
+      name: 'Oreo Shake',
+      description: '',
+      prices: { single: 5.99 },
+      category: 'desserts',
+    },
+    {
+      id: 'vanilla-shake',
+      name: 'Vanilla Shake',
+      description: '',
+      prices: { single: 5.99 },
+      category: 'desserts',
+    },
+    {
+      id: 'banana-milk-shake',
+      name: 'Banana Milk Shake',
+      description: '',
+      prices: { single: 5.99 },
+      category: 'desserts',
+    },
+    {
+      id: 'strawberry-shake',
+      name: 'Strawberry Shake',
+      description: '',
+      prices: { single: 5.99 },
+      category: 'desserts',
+    },
+    {
+      id: 'chocolate-shake',
+      name: 'Chocolate Shake',
+      description: '',
+      prices: { single: 5.99 },
+      category: 'desserts',
+    },
+  
   ];
 
   const filteredItems = menuItems.filter((item) => {

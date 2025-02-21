@@ -36,7 +36,17 @@ const DealsSection = () => {
         '2L Pop',
         '3 Dipping Sauce'
       ]
-    }
+    },
+    {
+      id: 4,
+      title: 'Burger Deal',
+      prices: '$10.99',
+      items: [
+        'Chicken Burger',
+        'Small Fries',
+        'Can of Pop'
+      ]
+    },
   ];
 
   useEffect(() => {
