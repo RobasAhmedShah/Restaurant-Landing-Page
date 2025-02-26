@@ -138,48 +138,71 @@ const MenuSection = () => {
     },
 
     // Combos
-    {
-      id: 'combo-1',
-      name: 'Combo 1',
-      description: 'Small Chicken Calzone, 6 Wings, 1 Can of Pop, 1 Dipping Sauce',
-      prices: { single: 17.99 },
-      category: 'combos'
-    },
-    {
-      id: 'combo-2',
-      name: 'Combo 2',
-      description: 'Medium Chicken Calzone, 10 Wings, 2 Cans of Pop, 2 Dipping Sauces',
-      prices: { single: 24.99 },
-      category: 'combos'
-    },
-    {
-      id: 'combo-3',
-      name: 'Combo 3',
-      description: '2 Medium Chicken Calzones, 16 Wings, 2L Pop, 3 Dipping Sauces',
-      prices: { single: 39.99 },
-      category: 'combos'
-    },
-    {
-      id: 'combo-4',
-      name: 'Combo 4',
-      description: 'Small One Topping Pizza, 6 Wings, 1 Can of Pop, 1 Dipping Sauce',
-      prices: { single: 17.99 },
-      category: 'combos'
-    },
-    {
-      id: 'combo-5',
-      name: 'Combo 5',
-      description: '1 Medium One Topping Pizza, 10 Wings, 2 Cans of Pop, 2 Dipping Sauces',
-      prices: { single: 24.99 },
-      category: 'combos'
-    },
-    {
-      id: 'combo-6',
-      name: 'Combo 6',
-      description: '2 Medium One Topping Pizzas, 16 Wings, 2L Pop, 3 Dipping Sauces',
-      prices: { single: 39.99 },
-      category: 'combos'
-    },
+{
+  id: 'combo-1',
+  name: 'Combo 1',
+  description: 'Small Chicken Calzone, 6 Wings, 1 Can of Pop, 1 Dipping Sauce',
+  prices: { single: 17.99 },
+  category: 'combos'
+},
+{
+  id: 'combo-2',
+  name: 'Combo 2',
+  description: 'Medium Chicken Calzone, 10 Wings, 2 Cans of Pop, 2 Dipping Sauces',
+  prices: { single: 24.99 },
+  category: 'combos'
+},
+{
+  id: 'combo-3',
+  name: 'Combo 3',
+  description: '2 Medium Chicken Calzones, 16 Wings, 2L Pop, 3 Dipping Sauces',
+  prices: { single: 39.99 },
+  category: 'combos'
+},
+{
+  id: 'combo-4',
+  name: 'Combo 4',
+  description: 'Small One Topping Pizza, 6 Wings, 1 Can of Pop, 1 Dipping Sauce',
+  prices: { single: 17.99 },
+  category: 'combos'
+},
+{
+  id: 'combo-5',
+  name: 'Combo 5',
+  description: '1 Medium One Topping Pizza, 10 Wings, 2 Cans of Pop, 2 Dipping Sauces',
+  prices: { single: 24.99 },
+  category: 'combos'
+},
+{
+  id: 'combo-6',
+  name: 'Combo 6',
+  description: '2 Medium One Topping Pizzas, 16 Wings, 2L Pop, 3 Dipping Sauces',
+  prices: { single: 39.99 },
+  category: 'combos'
+},
+// New "Add-in Combo" Section from Image
+{
+  id: 'combo-7',
+  name: 'Combo 7',
+  description: 'Small Calzone, Small Fries, 1 Can of Pop, 1 Dipping Sauce',
+  prices: { single: 13.99 },
+  category: 'combos'
+},
+{
+  id: 'combo-8',
+  name: 'Combo 8',
+  description: 'Medium Calzone, Medium Fries, 2 Cans of Pop, 2 Dipping Sauces',
+  prices: { single: 19.99 },
+  category: 'combos'
+},
+{
+  id: 'combo-9',
+  name: 'Combo 9',
+  description: 'Large Calzone, Large Fries, 2L Pop, 3 Dipping Sauces',
+  prices: { single: 24.99 },
+  category: 'combos'
+},
+
     
 
     // Individuals
@@ -446,7 +469,7 @@ const MenuSection = () => {
                     </button>
                   </div>
                   <p className={`text-gray-300 mb-4 ${item.description ? 'line-clamp-2' : 'text-sm italic'}`}>
-                    {item.description || 'No description available'}
+                    {item.description || ''}
                   </p>
                   <div className="flex justify-between items-end">
                     <div className="space-y-1">
