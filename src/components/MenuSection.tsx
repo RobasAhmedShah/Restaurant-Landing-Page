@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Info, X, Search } from 'lucide-react';
 
 interface MenuItem {
@@ -18,6 +18,7 @@ const MenuSection = () => {
   const [activeCategory, setActiveCategory] = useState('calzones');
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const menuRef = useRef<HTMLElement>(null);
 
   const categories = [
     { id: 'calzones', name: 'Calzones' },
@@ -138,72 +139,70 @@ const MenuSection = () => {
     },
 
     // Combos
-{
-  id: 'combo-1',
-  name: 'Combo 1',
-  description: 'Small Chicken Calzone, 6 Wings, 1 Can of Pop, 1 Dipping Sauce',
-  prices: { single: 17.99 },
-  category: 'combos'
-},
-{
-  id: 'combo-2',
-  name: 'Combo 2',
-  description: 'Medium Chicken Calzone, 10 Wings, 2 Cans of Pop, 2 Dipping Sauces',
-  prices: { single: 24.99 },
-  category: 'combos'
-},
-{
-  id: 'combo-3',
-  name: 'Combo 3',
-  description: '2 Medium Chicken Calzones, 16 Wings, 2L Pop, 3 Dipping Sauces',
-  prices: { single: 39.99 },
-  category: 'combos'
-},
-{
-  id: 'combo-4',
-  name: 'Combo 4',
-  description: 'Small One Topping Pizza, 6 Wings, 1 Can of Pop, 1 Dipping Sauce',
-  prices: { single: 17.99 },
-  category: 'combos'
-},
-{
-  id: 'combo-5',
-  name: 'Combo 5',
-  description: '1 Medium One Topping Pizza, 10 Wings, 2 Cans of Pop, 2 Dipping Sauces',
-  prices: { single: 24.99 },
-  category: 'combos'
-},
-{
-  id: 'combo-6',
-  name: 'Combo 6',
-  description: '2 Medium One Topping Pizzas, 16 Wings, 2L Pop, 3 Dipping Sauces',
-  prices: { single: 39.99 },
-  category: 'combos'
-},
-// New "Add-in Combo" Section from Image
-{
-  id: 'combo-7',
-  name: 'Combo 7',
-  description: 'Small Calzone, Small Fries, 1 Can of Pop, 1 Dipping Sauce',
-  prices: { single: 13.99 },
-  category: 'combos'
-},
-{
-  id: 'combo-8',
-  name: 'Combo 8',
-  description: 'Medium Calzone, Medium Fries, 2 Cans of Pop, 2 Dipping Sauces',
-  prices: { single: 19.99 },
-  category: 'combos'
-},
-{
-  id: 'combo-9',
-  name: 'Combo 9',
-  description: 'Large Calzone, Large Fries, 2L Pop, 3 Dipping Sauces',
-  prices: { single: 24.99 },
-  category: 'combos'
-},
-
-    
+    {
+      id: 'combo-1',
+      name: 'Combo 1',
+      description: 'Small Chicken Calzone, 6 Wings, 1 Can of Pop, 1 Dipping Sauce',
+      prices: { single: 17.99 },
+      category: 'combos'
+    },
+    {
+      id: 'combo-2',
+      name: 'Combo 2',
+      description: 'Medium Chicken Calzone, 10 Wings, 2 Cans of Pop, 2 Dipping Sauces',
+      prices: { single: 24.99 },
+      category: 'combos'
+    },
+    {
+      id: 'combo-3',
+      name: 'Combo 3',
+      description: '2 Medium Chicken Calzones, 16 Wings, 2L Pop, 3 Dipping Sauces',
+      prices: { single: 39.99 },
+      category: 'combos'
+    },
+    {
+      id: 'combo-4',
+      name: 'Combo 4',
+      description: 'Small One Topping Pizza, 6 Wings, 1 Can of Pop, 1 Dipping Sauce',
+      prices: { single: 17.99 },
+      category: 'combos'
+    },
+    {
+      id: 'combo-5',
+      name: 'Combo 5',
+      description: '1 Medium One Topping Pizza, 10 Wings, 2 Cans of Pop, 2 Dipping Sauces',
+      prices: { single: 24.99 },
+      category: 'combos'
+    },
+    {
+      id: 'combo-6',
+      name: 'Combo 6',
+      description: '2 Medium One Topping Pizzas, 16 Wings, 2L Pop, 3 Dipping Sauces',
+      prices: { single: 39.99 },
+      category: 'combos'
+    },
+    // New "Add-in Combo" Section from Image
+    {
+      id: 'combo-7',
+      name: 'Combo 7',
+      description: 'Small Calzone, Small Fries, 1 Can of Pop, 1 Dipping Sauce',
+      prices: { single: 13.99 },
+      category: 'combos'
+    },
+    {
+      id: 'combo-8',
+      name: 'Combo 8',
+      description: 'Medium Calzone, Medium Fries, 2 Cans of Pop, 2 Dipping Sauces',
+      prices: { single: 19.99 },
+      category: 'combos'
+    },
+    {
+      id: 'combo-9',
+      name: 'Combo 9',
+      description: 'Large Calzone, Large Fries, 2L Pop, 3 Dipping Sauces',
+      prices: { single: 24.99 },
+      category: 'combos'
+    },
 
     // Individuals
     {
@@ -383,7 +382,6 @@ const MenuSection = () => {
       prices: { single: 5.99 },
       category: 'desserts',
     },
-  
   ];
 
   const filteredItems = menuItems.filter((item) => {
@@ -408,17 +406,58 @@ const MenuSection = () => {
       setActiveCategory(filteredItems[0].category);
     }
   }, [searchQuery, filteredItems]);
+  
+  const [isSticky, setIsSticky] = useState(false);
+  
+  // Sticky navigation logic
+  useEffect(() => {
+    const menuSection = document.getElementById('menu');
+    const navBar = document.getElementById('category-nav');
+    const searchBar = document.getElementById('search-bar');
+    
+    if (!menuSection || !navBar || !searchBar) return;
+    
+    const handleScroll = () => {
+      const menuRect = menuSection.getBoundingClientRect();
+      const searchBarBottom = searchBar.getBoundingClientRect().bottom;
+      const menuBottom = menuRect.bottom;
+      
+      // Make nav sticky when scroll passes search bar and menu section is still visible
+      if (searchBarBottom <= 0 && menuBottom > 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Function to handle category change and scroll
+  // Function to handle category change and scroll
+const handleCategoryChange = (categoryId: string) => {
+  setActiveCategory(categoryId);
+  
+  // Scroll to search bar
+  const searchBar = document.getElementById('search-bar');
+  if (searchBar) {
+    // Adding a small delay to ensure state updates before scrolling
+    setTimeout(() => {
+      searchBar.scrollIntoView({ behavior: 'smooth' });
+    }, 10);
+  }
+};
 
   return (
-    <section id="menu" className="py-20 bg-black">
+    <section id="menu" className="py-20 bg-black" ref={menuRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12">
           <span className="text-white">Our </span>
           <span className="text-orange-500">Menu</span>
         </h2>
-
         {/* Search Bar */}
-        <div className="relative max-w-md mx-auto mb-8">
+        <div id="search-bar" className="relative max-w-md mx-auto mb-8">
           <div className="relative">
             <input
               type="text"
@@ -431,27 +470,41 @@ const MenuSection = () => {
           </div>
         </div>
 
-       {/* Category Tabs */}
-<div className="flex justify-start space-x-2 mb-6 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-orange-500 pl-4 pr-4 snap-x snap-mandatory">
-  <div className="flex space-x-2 min-w-max">
-    {categories.map((category) => (
-      <button
-        key={category.id}
-        onClick={() => setActiveCategory(category.id)}
-        className={`px-4 py-1 text-sm rounded-full transition-colors duration-300 whitespace-nowrap shrink-0 snap-start ${
-          activeCategory === category.id
-            ? 'bg-orange-500 text-white'
-            : 'bg-white/5 text-white hover:bg-orange-500 hover:text-white'
-        }`}
-      >
-        {category.name}
-      </button>
-    ))}
-  </div>
-</div>
+        {/* Category Tabs - Sticky when scrolling */}
+        <div 
+          id="category-nav"
+          className={`${
+            isSticky 
+              ? 'fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm shadow-lg px-4 py-3' 
+              : ''
+          } transition-all duration-300`}
+        >
+          <div className={`flex justify-start space-x-2 mb-6 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-orange-500 snap-x snap-mandatory ${
+            isSticky ? 'max-w-7xl mx-auto' : 'pl-4 pr-4'
+          }`}>
+            <div className="flex space-x-2 min-w-max">
+              {categories.map((category) => (
+                <button
+                key={category.id}
+                onClick={() => handleCategoryChange(category.id)}
+                className={`px-4 py-1 text-sm rounded-full transition-colors duration-300 whitespace-nowrap shrink-0 snap-start ${
+                  activeCategory === category.id
+                    ? 'bg-orange-500 text-white'
+                    : 'bg-white/5 text-white hover:bg-orange-500 hover:text-white'
+                }`}
+              >
+                {category.name}
+              </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Add spacer when nav is sticky to prevent content jump */}
+        {isSticky && <div className="h-16"></div>}
 
         {/* Menu Items Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="menu-items-container" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.length > 0 ? (
             filteredItems.map((item) => (
               <div
@@ -496,7 +549,6 @@ const MenuSection = () => {
                         </div>
                       )}
                     </div>
-                   
                   </div>
                 </div>
               </div>
@@ -507,7 +559,7 @@ const MenuSection = () => {
             </div>
           )}
         </div>
-
+        
         {/* Info Dialog */}
         {selectedItem && (
           <div className="fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50">
