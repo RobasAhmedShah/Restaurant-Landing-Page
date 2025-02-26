@@ -431,22 +431,24 @@ const MenuSection = () => {
           </div>
         </div>
 
-        {/* Category Tabs */}
-        <div className="flex justify-center space-x-4 mb-12 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-orange-500">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-2 rounded-full transition-colors duration-300 whitespace-nowrap ${
-                activeCategory === category.id
-                  ? 'bg-orange-500 text-white'
-                  : 'bg-white/5 text-white hover:bg-orange-500 hover:text-white'
-              }`}
-            >
-              {category.name}
-            </button>
-          ))}
-        </div>
+       {/* Category Tabs */}
+<div className="flex justify-start space-x-2 mb-6 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-orange-500 pl-4 pr-4 snap-x snap-mandatory">
+  <div className="flex space-x-2 min-w-max">
+    {categories.map((category) => (
+      <button
+        key={category.id}
+        onClick={() => setActiveCategory(category.id)}
+        className={`px-4 py-1 text-sm rounded-full transition-colors duration-300 whitespace-nowrap shrink-0 snap-start ${
+          activeCategory === category.id
+            ? 'bg-orange-500 text-white'
+            : 'bg-white/5 text-white hover:bg-orange-500 hover:text-white'
+        }`}
+      >
+        {category.name}
+      </button>
+    ))}
+  </div>
+</div>
 
         {/* Menu Items Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
