@@ -1,4 +1,4 @@
-import { Phone, Clock, MapPin } from 'lucide-react';
+import { Phone, Clock, MapPin, Mail, Globe } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -10,15 +10,15 @@ const Footer = () => {
             <div className="space-y-4">
               <p className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-orange-500" />
-                (905) 595-0211
+                <a href="tel:+19055950211" className="hover:text-orange-500">(905) 595-0211</a>
               </p>
               <p className="flex items-center">
                 <Clock className="h-5 w-5 mr-2 text-orange-500" />
-                Mon-Sun: 11:00 AM - 09:00 PM
+                <span>Monday–Thursday: 4 PM–11 PM<br />Friday: 2 PM–11 PM<br />Saturday–Sunday: 1 PM–11 PM</span>
               </p>
               <p className="flex items-center">
                 <MapPin className="h-5 w-5 mr-2 text-orange-500" />
-                35 King St, E., Mississauga, ON. L5A 4E2,Unit 20.
+                35 King St E, Mississauga
               </p>
             </div>
           </div>
@@ -39,23 +39,22 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold text-orange-500 mb-4">Newsletter</h3>
-            <p className="mb-4">Subscribe to get special offers and updates!</p>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-4 py-2 rounded-l-full bg-white/10 focus:outline-none focus:ring-2 focus:ring-orange-500"
-              />
-              <button className="px-6 py-2 bg-orange-500 text-white rounded-r-full hover:bg-orange-600 transition-colors">
-                Subscribe
-              </button>
+            <h3 className="text-2xl font-bold text-orange-500 mb-4">Calzone Point</h3>
+            <div className="space-y-4">
+              <p className="flex items-center gap-2">
+                <Mail className="h-5 w-5 shrink-0 text-orange-500" />
+                <a href="mailto:calzonepoint@gmail.com" className="break-all hover:text-orange-500">calzonepoint@gmail.com</a>
+              </p>
+              <p className="flex items-center gap-2">
+                <Globe className="h-5 w-5 shrink-0 text-orange-500" />
+                <a href="https://www.calzonepoint.ca" className="hover:text-orange-500">www.calzonepoint.ca</a>
+              </p>
             </div>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 text-center">
-          <p>&copy; 2025 CALZONES POINT. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Calzone Point. All rights reserved.</p>
         </div>
       </div>
     </footer>

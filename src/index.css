@@ -58,6 +58,7 @@ img {
 }
 
 .spotlight::after {
+  pointer-events: none;
   content: '';
   @apply absolute inset-0 opacity-0 transition-opacity duration-300;
   background: radial-gradient(circle at center, rgba(251, 146, 60, 0.2) 0%, transparent 70%);
