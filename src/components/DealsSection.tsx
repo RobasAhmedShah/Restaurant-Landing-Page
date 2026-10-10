@@ -1,53 +1,9 @@
 import { useState, useEffect } from 'react';
+import { deals } from '../data/menu';
 
 const DealsSection = () => {
   const [currentDeal, setCurrentDeal] = useState(0);
 
-  const deals = [
-    {
-      id: 1,
-      title: 'DEAL 1',
-      price: '$14.99',
-      items: [
-        'Small Chicken Calzone',
-        'Small Fries',
-        'Can of Pop',
-        'Dipping Sauce'
-      ]
-    },
-    {
-      id: 2,
-      title: 'DEAL 2',
-      price: '$18.99',
-      items: [
-        'Medium Chicken Calzone',
-        'Medium Fries',
-        '2 Can of Pop',
-        '2 Dipping Sauce'
-      ]
-    },
-    {
-      id: 3,
-      title: 'DEAL 3',
-      price: '$23.99',
-      items: [
-        'Large Chicken Calzone',
-        'Large Fries',
-        '2L Pop',
-        '3 Dipping Sauce'
-      ]
-    },
-    {
-      id: 4,
-      title: 'Burger Deal',
-      price: '$10.99',
-      items: [
-        'Chicken Burger',
-        'Small Fries',
-        'Can of Pop'
-      ]
-    },
-  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -77,9 +33,9 @@ const DealsSection = () => {
           <span className="text-orange-500">Deals</span>
         </h2>
 
-        <div className="relative max-w-md mx-auto">
+        <div className="relative max-w-md mx-auto px-8 sm:px-0">
           {/* Cards Container */}
-          <div className="relative h-[400px] perspective-1000">
+          <div className="relative h-[480px] perspective-1000">
             {deals.map((deal, index) => (
               <div
                 key={deal.id}
@@ -92,7 +48,7 @@ const DealsSection = () => {
                 }`}
               >
                 <div className="h-full flex flex-col">
-                  <h3 className="text-3xl font-bold text-orange-500 mb-4">{deal.title}</h3>
+                  <h3 className="text-3xl font-bold text-orange-500 mb-4">{deal.name}</h3>
                   <div className="flex-grow">
                     <ul className="space-y-4 text-lg text-white">
                       {deal.items.map((item, i) => (
@@ -104,7 +60,7 @@ const DealsSection = () => {
                     </ul>
                   </div>
                   <div className="mt-8">
-                    <div className="text-4xl font-bold text-white mb-4">{deal.price}</div>
+                    <div className="text-4xl font-bold text-white mb-4">${deal.price.toFixed(2)}</div>
                     
                   </div>
                 </div>
@@ -114,8 +70,9 @@ const DealsSection = () => {
 
           {/* Navigation Buttons */}
           <button
+            aria-label="Previous deal"
             onClick={handlePrevDeal}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-orange-500/20 hover:bg-orange-500 text-white p-3 rounded-full transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 sm:-translate-x-12 bg-orange-500/20 hover:bg-orange-500 text-white p-3 rounded-full transition-colors"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -133,8 +90,9 @@ const DealsSection = () => {
             </svg>
           </button>
           <button
+            aria-label="Next deal"
             onClick={handleNextDeal}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-orange-500/20 hover:bg-orange-500 text-white p-3 rounded-full transition-colors"
+            className="absolute right-0 top-1/2 -translate-y-1/2 sm:translate-x-12 bg-orange-500/20 hover:bg-orange-500 text-white p-3 rounded-full transition-colors"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -157,6 +115,7 @@ const DealsSection = () => {
             {deals.map((_, index) => (
               <button
                 key={index}
+                aria-label={`Show ${deals[index].name}`}
                 onClick={() => handleDotClick(index)}
                 className={`w-3 h-3 rounded-full transition-colors ${
                   index === currentDeal ? 'bg-orange-500' : 'bg-orange-500/20'
