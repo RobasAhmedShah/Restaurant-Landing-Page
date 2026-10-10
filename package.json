@@ -5,11 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run build:web && npm run build --prefix studio",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:web": "vite build",
+    "test": "node --test scripts/content.test.mjs",
+    "postinstall": "npm ci --prefix studio --no-audit --no-fund"
   },
   "dependencies": {
+    "@sanity/client": "^8.9.0",
+    "groq": "^6.18.0",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

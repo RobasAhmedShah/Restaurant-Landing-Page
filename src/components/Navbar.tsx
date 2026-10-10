@@ -1,3 +1,4 @@
+import { useSiteContent } from '../data/content';
 import React, { useState } from 'react';
 import { Menu , X } from 'lucide-react';
 import logo from './calzonepoint.svg';
@@ -6,6 +7,7 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
+  const { settings } = useSiteContent();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -41,8 +43,8 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
           <div className="flex items-center">
             {/* Logo Placeholder */}
             <img
-              src={logo} // Replace with the path to your logo
-              alt="CALZONE Point Logo"
+              src={settings.logoUrl || logo} // Replace with the path to your logo
+              alt={`${settings.name} Logo`}
               className="inline-block h-16 md:h-20" // Adjust height as needed
             />
           </div>
