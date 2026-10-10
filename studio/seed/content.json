@@ -1,0 +1,756 @@
+{
+  "items": [
+    {
+      "_type": "menuItem",
+      "legacyId": "chicken-calzone",
+      "name": "Chicken Calzone (Special)",
+      "description": "Chicken, Coleslaw, Garlic Sauce",
+      "category": "calzones",
+      "prices": {
+        "small": 13.99,
+        "medium": 17.99,
+        "large": 23.99,
+        "extraLarge": 29.99
+      },
+      "order": 0,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "beef-calzone",
+      "name": "Beef Calzone",
+      "description": "Ground Beef, Coleslaw, Garlic Sauce",
+      "category": "calzones",
+      "prices": {
+        "small": 13.99,
+        "medium": 17.99,
+        "large": 23.99,
+        "extraLarge": 29.99
+      },
+      "order": 1,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "mix-calzone",
+      "name": "Mix Calzone",
+      "description": "Chicken, Ground Beef, Coleslaw, Garlic Sauce",
+      "category": "calzones",
+      "prices": {
+        "small": 13.99,
+        "medium": 17.99,
+        "large": 23.99,
+        "extraLarge": 29.99
+      },
+      "order": 2,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "meaty-calzone",
+      "name": "Meaty Calzone",
+      "description": "Ground Beef, Chicken, Beef Pepperoni, Coleslaw, Garlic Sauce",
+      "category": "calzones",
+      "prices": {
+        "small": 13.99,
+        "medium": 17.99,
+        "large": 23.99,
+        "extraLarge": 29.99
+      },
+      "order": 3,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "chicken-spinach-calzone",
+      "name": "Chicken and Spinach Calzone",
+      "description": "Chicken, Spinach, Melted Mozzarella Cheese, Garlic Sauce",
+      "category": "calzones",
+      "prices": {
+        "small": 13.99,
+        "medium": 17.99,
+        "large": 23.99,
+        "extraLarge": 29.99
+      },
+      "order": 4,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "veggie-calzone",
+      "name": "Veggie Calzone",
+      "description": "Green Pepper, Red Onion, Black Olives, Hot Banana Pepper, Coleslaw, Garlic Sauce",
+      "category": "calzones",
+      "prices": {
+        "small": 13.99,
+        "medium": 17.99,
+        "large": 23.99,
+        "extraLarge": 29.99
+      },
+      "order": 5,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "spinach-calzone",
+      "name": "Spinach Calzone",
+      "description": "Spinach, Loaded Mozzarella Cheese, Garlic Sauce",
+      "category": "calzones",
+      "prices": {
+        "small": 13.99,
+        "medium": 17.99,
+        "large": 23.99,
+        "extraLarge": 29.99
+      },
+      "order": 6,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "cheese-calzone",
+      "name": "Cheese Calzone",
+      "description": "Mozzarella Cheese, Coleslaw, Garlic Sauce",
+      "category": "calzones",
+      "prices": {
+        "small": 13.99,
+        "medium": 17.99,
+        "large": 23.99,
+        "extraLarge": 29.99
+      },
+      "order": 7,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "malai-boti-pizza",
+      "name": "Malai Boti Pizza (Most Famous Signature Pizza)",
+      "description": "Creamy White Sauce, Loaded White Juicy Chicken Malai Boti, Green Pepper, Red Onion, Black Olives, Hot Banana Pepper, Loaded Mozzarella Cheese",
+      "category": "signature-pizzas",
+      "prices": {
+        "small": 15.99,
+        "medium": 19.99,
+        "large": 24.99,
+        "extraLarge": 29.99
+      },
+      "order": 8,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "tandoori-pizza",
+      "name": "Tandoori Style Pizza (Spicy Special)",
+      "description": "Loaded Chunks of Tandoori Chicken, Tandoori Style Sauce, Jalapeño, Mushrooms, Red Onion, Green Pepper, Black Olives, Loaded Mozzarella Cheese",
+      "category": "signature-pizzas",
+      "prices": {
+        "small": 15.99,
+        "medium": 19.99,
+        "large": 24.99,
+        "extraLarge": 29.99
+      },
+      "order": 9,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "garden-pizza",
+      "name": "Garden Pizza (Veggie)",
+      "description": "Green Pepper, Red Onion, Hot Banana Pepper, Black Olives",
+      "category": "pizzas",
+      "prices": {
+        "small": 14.99,
+        "medium": 17.99,
+        "large": 21.99,
+        "extraLarge": 25.99
+      },
+      "order": 10,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "meat-lovers-pizza",
+      "name": "Meat Lovers Pizza",
+      "description": "Beef Pepperoni, Chicken, Ground Beef",
+      "category": "pizzas",
+      "prices": {
+        "small": 14.99,
+        "medium": 17.99,
+        "large": 21.99,
+        "extraLarge": 25.99
+      },
+      "order": 11,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "dream-pizza",
+      "name": "Dream Pizza",
+      "description": "Chicken, Beef Pepperoni, Red Onion, Mushroom, Green Pepper",
+      "category": "pizzas",
+      "prices": {
+        "small": 14.99,
+        "medium": 17.99,
+        "large": 21.99,
+        "extraLarge": 25.99
+      },
+      "order": 12,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "chicken-fajita-pizza",
+      "name": "Chicken Fajita Pizza",
+      "description": "Chicken, Green Pepper, Red Onion",
+      "category": "pizzas",
+      "prices": {
+        "small": 14.99,
+        "medium": 17.99,
+        "large": 21.99,
+        "extraLarge": 25.99
+      },
+      "order": 13,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "mexican-pizza",
+      "name": "Mexican Pizza",
+      "description": "Beef, Hot Banana Pepper, Onion, Green Pepper",
+      "category": "pizzas",
+      "prices": {
+        "small": 14.99,
+        "medium": 17.99,
+        "large": 21.99,
+        "extraLarge": 25.99
+      },
+      "order": 14,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "california-pizza",
+      "name": "California Pizza",
+      "description": "Chicken, Sun-Dried Tomato, Jalapeño",
+      "category": "pizzas",
+      "prices": {
+        "small": 14.99,
+        "medium": 17.99,
+        "large": 21.99,
+        "extraLarge": 25.99
+      },
+      "order": 15,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "greek-pizza",
+      "name": "Greek Pizza",
+      "description": "Spinach, Green Olives, Red Onion, Cheese",
+      "category": "pizzas",
+      "prices": {
+        "small": 14.99,
+        "medium": 17.99,
+        "large": 21.99,
+        "extraLarge": 25.99
+      },
+      "order": 16,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "combo-1",
+      "name": "Combo 1",
+      "description": "Small Chicken Calzone, 6 Chicken Wings, 1 Can of Pop, 1 Dip",
+      "category": "combos",
+      "prices": {
+        "single": 23.99
+      },
+      "order": 17,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "combo-2",
+      "name": "Combo 2",
+      "description": "Medium Chicken Calzone, 12 Chicken Wings, 2 Cans of Pop, 2 Dips",
+      "category": "combos",
+      "prices": {
+        "single": 34.99
+      },
+      "order": 18,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "combo-3",
+      "name": "Combo 3",
+      "description": "2 Medium Chicken Calzones, 18 Chicken Wings, 4 Cans of Pop, 4 Dipping Sauces",
+      "category": "combos",
+      "prices": {
+        "single": 64.99
+      },
+      "order": 19,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "combo-4",
+      "name": "Combo 4",
+      "description": "Small 3 Topping Pizza, 6 Chicken Wings, 1 Can of Pop, 1 Dip",
+      "category": "combos",
+      "prices": {
+        "single": 23.99
+      },
+      "order": 20,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "combo-5",
+      "name": "Combo 5",
+      "description": "Medium 3 Topping Pizza, 12 Chicken Wings, 2 Cans of Pop, 2 Dips",
+      "category": "combos",
+      "prices": {
+        "single": 34.99
+      },
+      "order": 21,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "combo-6",
+      "name": "Combo 6",
+      "description": "2 Medium 3 Topping Pizzas, 18 Chicken Wings, 4 Cans of Pop, 4 Dips",
+      "category": "combos",
+      "prices": {
+        "single": 64.99
+      },
+      "order": 22,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "combo-7",
+      "name": "Combo 7",
+      "description": "Large Malai Boti Pizza, Large 4 Topping Pizza, Large Fries, 6 Wings or 4 Pieces of Fish, 5 Cans of Pop, 5 Dipping Sauces",
+      "category": "special-combos",
+      "prices": {
+        "single": 64.99
+      },
+      "order": 23,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "combo-8",
+      "name": "Combo 8",
+      "description": "Large Malai Boti Pizza, Large Chicken Calzone, 6 Chicken Wings or 4 Pieces of Fish, Large Fries, 5 Cans of Pop, 5 Dipping Sauces",
+      "category": "special-combos",
+      "prices": {
+        "single": 69.99
+      },
+      "order": 24,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "deal-1",
+      "name": "Deal 1",
+      "description": "Small Chicken Calzone, Small Fries, 1 Can of Pop, 1 Dip",
+      "category": "deals",
+      "prices": {
+        "single": 17.49
+      },
+      "order": 25,
+      "availability": "available",
+      "items": [
+        "Small Chicken Calzone",
+        "Small Fries",
+        "1 Can of Pop",
+        "1 Dip"
+      ]
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "deal-2",
+      "name": "Deal 2",
+      "description": "1 Medium Chicken Calzone, 1 Medium Fries, 2 Cans of Pop, 2 Dips",
+      "category": "deals",
+      "prices": {
+        "single": 24.99
+      },
+      "order": 26,
+      "availability": "available",
+      "items": [
+        "1 Medium Chicken Calzone",
+        "1 Medium Fries",
+        "2 Cans of Pop",
+        "2 Dips"
+      ]
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "deal-3",
+      "name": "Deal 3",
+      "description": "Large Chicken Calzone, Large Fries, 3 Cans of Pop, 3 Dips",
+      "category": "deals",
+      "prices": {
+        "single": 34.99
+      },
+      "order": 27,
+      "availability": "available",
+      "items": [
+        "Large Chicken Calzone",
+        "Large Fries",
+        "3 Cans of Pop",
+        "3 Dips"
+      ]
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "fish-deal",
+      "name": "Fish Deal",
+      "description": "4 Pieces of Fish (Basa), Small Fries, 1 Can of Pop, 1 Dip",
+      "category": "deals",
+      "prices": {
+        "single": 11.99
+      },
+      "order": 28,
+      "availability": "available",
+      "items": [
+        "4 Pieces of Fish (Basa)",
+        "Small Fries",
+        "1 Can of Pop",
+        "1 Dip"
+      ]
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "slice-deal",
+      "name": "Slice Deal",
+      "description": "1 Malai Boti Slice, 2 Pieces of Fish, Small Fries, 1 Can of Pop, 1 Dip",
+      "category": "deals",
+      "prices": {
+        "single": 9.99
+      },
+      "order": 29,
+      "availability": "available",
+      "items": [
+        "1 Malai Boti Slice",
+        "2 Pieces of Fish",
+        "Small Fries",
+        "1 Can of Pop",
+        "1 Dip"
+      ]
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "small-pizza",
+      "name": "1 Small 3 Topping Pizza",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 12.99
+      },
+      "order": 30,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "medium-pizza",
+      "name": "1 Medium 3 Topping Pizza",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 14.99
+      },
+      "order": 31,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "large-pizza",
+      "name": "1 Large 3 Topping Pizza",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 16.99
+      },
+      "order": 32,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "6-wings",
+      "name": "6 Chicken Wings",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 9.99
+      },
+      "order": 33,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "12-wings",
+      "name": "12 Chicken Wings",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 17.99
+      },
+      "order": 34,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "18-wings",
+      "name": "18 Chicken Wings",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 26.99
+      },
+      "order": 35,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "4-fish",
+      "name": "4 Pieces of Fish",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 9.99
+      },
+      "order": 36,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "8-fish",
+      "name": "8 Pieces of Fish",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 17.99
+      },
+      "order": 37,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "12-fish",
+      "name": "12 Pieces of Fish",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 26.99
+      },
+      "order": 38,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "poutine",
+      "name": "Regular Poutine",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 6.99
+      },
+      "order": 39,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "small-fries",
+      "name": "Small Fries",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 2.99
+      },
+      "order": 40,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "medium-fries",
+      "name": "Medium Fries",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 3.99
+      },
+      "order": 41,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "large-fries",
+      "name": "Large Fries",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 6.99
+      },
+      "order": 42,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "can-pop",
+      "name": "Can of Pop",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 1.99
+      },
+      "order": 43,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "water-bottle",
+      "name": "Water Bottle",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 1
+      },
+      "order": 44,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "mango-juice",
+      "name": "Mango Juice",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 2.99
+      },
+      "order": 45,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "dipping-sauce",
+      "name": "Dipping Sauce",
+      "description": "",
+      "category": "individuals",
+      "prices": {
+        "single": 0.5
+      },
+      "order": 46,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "falooda",
+      "name": "Falooda (Special)",
+      "description": "",
+      "category": "desserts",
+      "prices": {
+        "single": 9.99
+      },
+      "order": 47,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "mango-shake",
+      "name": "Mango Shake",
+      "description": "",
+      "category": "desserts",
+      "prices": {
+        "single": 6.99
+      },
+      "order": 48,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "oreo-shake",
+      "name": "Oreo Shake",
+      "description": "",
+      "category": "desserts",
+      "prices": {
+        "single": 6.99
+      },
+      "order": 49,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "strawberry-shake",
+      "name": "Strawberry Shake",
+      "description": "",
+      "category": "desserts",
+      "prices": {
+        "single": 6.99
+      },
+      "order": 50,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "banana-shake",
+      "name": "Banana Shake",
+      "description": "",
+      "category": "desserts",
+      "prices": {
+        "single": 6.99
+      },
+      "order": 51,
+      "availability": "available"
+    },
+    {
+      "_type": "menuItem",
+      "legacyId": "chocolate-shake",
+      "name": "Chocolate Shake",
+      "description": "",
+      "category": "desserts",
+      "prices": {
+        "single": 6.99
+      },
+      "order": 52,
+      "availability": "available"
+    }
+  ],
+  "settings": {
+    "_id": "siteSettings",
+    "_type": "siteSettings",
+    "name": "Calzone Point",
+    "welcome": "Welcome to",
+    "tagline": "Where Every Bite is a Delight",
+    "address": "35 King St E, Mississauga",
+    "phone": "(905) 595-0211",
+    "email": "calzonepoint@gmail.com",
+    "website": "https://www.calzonepoint.ca",
+    "hours": [
+      "Monday–Thursday: 4 PM–11 PM",
+      "Friday: 2 PM–11 PM",
+      "Saturday–Sunday: 1 PM–11 PM"
+    ],
+    "videoUrl": "https://static.vecteezy.com/system/resources/previews/002/177/688/mp4/italian-pizza-near-fire-free-video.mp4",
+    "seoTitle": "Calzone Point - Best Calzones in Mississauga | Fresh & Delicious",
+    "seoDescription": "Calzone Point offers freshly made calzones and pizzas in Mississauga. Visit us at 35 King St E.",
+    "toppings": [
+      "Chicken",
+      "Beef Pepperoni",
+      "Beef",
+      "Green Pepper",
+      "Red Onion",
+      "Green Olives",
+      "Black Olives",
+      "Mushrooms",
+      "Hot Banana Pepper",
+      "Jalapeño",
+      "Pineapple",
+      "Spinach",
+      "Cheese"
+    ]
+  }
+}

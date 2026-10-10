@@ -1,6 +1,8 @@
+import { useSiteContent } from '../data/content';
 import { Phone, Clock, MapPin, Mail, Globe } from 'lucide-react';
 
 const Footer = () => {
+  const { settings } = useSiteContent();
   return (
     <footer id="contact" className="bg-black text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -10,15 +12,15 @@ const Footer = () => {
             <div className="space-y-4">
               <p className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-orange-500" />
-                <a href="tel:+19055950211" className="hover:text-orange-500">(905) 595-0211</a>
+                <a href={`tel:${settings.phone.replace(/[^+\d]/g, "")}`} className="hover:text-orange-500">{settings.phone}</a>
               </p>
               <p className="flex items-center">
                 <Clock className="h-5 w-5 mr-2 text-orange-500" />
-                <span>Monday–Thursday: 4 PM–11 PM<br />Friday: 2 PM–11 PM<br />Saturday–Sunday: 1 PM–11 PM</span>
+                <span>{settings.hours.map(line => <span key={line} className="block">{line}</span>)}</span>
               </p>
               <p className="flex items-center">
                 <MapPin className="h-5 w-5 mr-2 text-orange-500" />
-                35 King St E, Mississauga
+                {settings.address}
               </p>
             </div>
           </div>
@@ -39,22 +41,22 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold text-orange-500 mb-4">Calzone Point</h3>
+            <h3 className="text-2xl font-bold text-orange-500 mb-4">{settings.name}</h3>
             <div className="space-y-4">
               <p className="flex items-center gap-2">
                 <Mail className="h-5 w-5 shrink-0 text-orange-500" />
-                <a href="mailto:calzonepoint@gmail.com" className="break-all hover:text-orange-500">calzonepoint@gmail.com</a>
+                <a href={`mailto:${settings.email}`} className="break-all hover:text-orange-500">{settings.email}</a>
               </p>
               <p className="flex items-center gap-2">
                 <Globe className="h-5 w-5 shrink-0 text-orange-500" />
-                <a href="https://www.calzonepoint.ca" className="hover:text-orange-500">www.calzonepoint.ca</a>
+                <a href={settings.website} className="hover:text-orange-500">{settings.website.replace(/^https?:\/\//, "")}</a>
               </p>
             </div>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 text-center">
-          <p>&copy; {new Date().getFullYear()} Calzone Point. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {settings.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>

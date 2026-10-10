@@ -1,9 +1,12 @@
+import { useSiteContent } from '../data/content';
 import { useEffect, useState, useRef } from 'react';
 import { Info, X, Search } from 'lucide-react';
 
-import { categories, menuItems, toppings, sizeLabel, type MenuItem } from '../data/menu';
+import { categories, sizeLabel, type MenuItem } from '../data/menu';
 
 const MenuSection = () => {
+  const { menuItems, toppings, settings } = useSiteContent();
+  const orderPhone = settings.phone.replace(/[^+\d]/g, '');
   const [activeCategory, setActiveCategory] = useState('calzones');
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -136,6 +139,7 @@ const handleCategoryChange = (categoryId: string) => {
                 key={item.id}
                 className="bg-white/5 rounded-lg overflow-hidden hover:bg-white/10 transition-colors duration-300 spotlight border border-orange-500/10"
               >
+                {item.imageUrl && <img src={item.imageUrl} alt={item.name} loading="lazy" className="w-full aspect-video object-cover" />}
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-xl font-semibold text-orange-500">
@@ -212,7 +216,7 @@ const handleCategoryChange = (categoryId: string) => {
                   </>
                 )}
               </div>
-              <a href="tel:+19055950211" className="block text-center w-full mt-6 bg-orange-500 text-white py-2 rounded-full hover:bg-orange-600 transition-colors">
+              <a href={`tel:${orderPhone}`} className="block text-center w-full mt-6 bg-orange-500 text-white py-2 rounded-full hover:bg-orange-600 transition-colors">
                 Call to Order
               </a>
             </div>

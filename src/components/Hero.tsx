@@ -1,11 +1,14 @@
+import { useSiteContent } from '../data/content';
 
 const Hero = () => {
+  const { settings } = useSiteContent();
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black z-10" />
-        <video
+        {settings.videoUrl && <video
+          key={settings.videoUrl}
           autoPlay
           muted
           loop
@@ -13,25 +16,25 @@ const Hero = () => {
           className="w-full h-full object-cover"
         >
           <source
-            src="https://static.vecteezy.com/system/resources/previews/002/177/688/mp4/italian-pizza-near-fire-free-video.mp4"
+            src={settings.videoUrl}
             type="video/mp4"
           />
           Your browser does not support the video tag.
-        </video>
+        </video>}
       </div>
 
       {/* Content */}
       <div className="relative z-20 text-center px-4 max-w-5xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-          <span className="text-white">Welcome to </span>
+          <span className="text-white">{settings.welcome} </span>
          
             {/* Handwriting-style Text */}
     <span className="font-handwriting text-6xl md:text-8xl text-orange-500">
-      Calzone Point
+      {settings.name}
     </span>
         </h1>
         <p className="text-xl md:text-2xl text-white mb-8 opacity-90">
-          Where Every Bite is a Delight
+          {settings.tagline}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

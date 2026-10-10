@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react';
-import { deals } from '../data/menu';
+import { useSiteContent } from '../data/content';
 
 const DealsSection = () => {
+  const { deals } = useSiteContent();
   const [currentDeal, setCurrentDeal] = useState(0);
 
 
   useEffect(() => {
+    if (deals.length < 2) return;
     const timer = setInterval(() => {
       setCurrentDeal((prev) => (prev + 1) % deals.length);
     }, 3000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [deals.length]);
 
   const handleDotClick = (index: number) => {
     setCurrentDeal(index);
@@ -25,6 +27,8 @@ const DealsSection = () => {
     setCurrentDeal((prev) => (prev + 1) % deals.length);
   };
 
+  if (!deals.length) return null;
+  const visibleDeal = currentDeal % deals.length;
   return (
     <section id="deals" className="py-20 bg-gradient-to-b from-black to-orange-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,9 +44,9 @@ const DealsSection = () => {
               <div
                 key={deal.id}
                 className={`absolute inset-0 bg-gradient-to-br from-black to-orange-900/50 rounded-2xl p-8 shadow-xl border border-orange-500/20 backdrop-blur-sm transition-all duration-500 transform-gpu ${
-                  index === currentDeal
+                  index === visibleDeal
                     ? 'opacity-100 translate-y-0 rotate-0'
-                    : index < currentDeal
+                    : index < visibleDeal
                     ? 'opacity-0 -translate-y-8 rotate-3'
                     : 'opacity-0 translate-y-8 -rotate-3'
                 }`}
@@ -118,7 +122,7 @@ const DealsSection = () => {
                 aria-label={`Show ${deals[index].name}`}
                 onClick={() => handleDotClick(index)}
                 className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentDeal ? 'bg-orange-500' : 'bg-orange-500/20'
+                  index === visibleDeal ? 'bg-orange-500' : 'bg-orange-500/20'
                 }`}
               />
             ))}

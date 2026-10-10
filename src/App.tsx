@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import ContentProvider from './components/ContentProvider';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import MenuSection from './components/MenuSection';
@@ -18,6 +19,7 @@ function App() {
   }, []);
 
   return (
+    <ContentProvider>
     <div className="min-h-screen bg-black text-white">
       <Navbar scrolled={scrolled} />
       <main>
@@ -27,6 +29,7 @@ function App() {
       </main>
       <Footer />
     </div>
+    </ContentProvider>
   );
 }
 
