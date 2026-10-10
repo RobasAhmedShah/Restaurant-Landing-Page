@@ -10,7 +10,7 @@ export default defineConfig({
     S.divider(),
     ...['calzones', 'signature-pizzas', 'pizzas', 'combos', 'special-combos', 'deals', 'individuals', 'desserts'].map(category =>
       S.listItem().id(category).title(category.split('-').map(word => word[0].toUpperCase() + word.slice(1)).join(' ')).child(
-        S.documentTypeList('menuItem').title('Menu Items').filter('_type == "menuItem" && category == $category').params({ category })
+        S.documentTypeList('menuItem').title('Menu Items').apiVersion('2026-10-10').filter('_type == "menuItem" && category == $category').params({ category })
       )
     ),
     S.documentTypeListItem('menuItem').title('All Menu Items'),
